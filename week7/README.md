@@ -29,4 +29,18 @@ We give OpenCV four point pairs:
 
 - `pythonM = cv.getPerspectiveTransform(src_points, dst_points)`
 - `result = cv.warpPerspective(image, M, (output_width, output_height))`
-OpenCV solves the 3×3 matrix from those 8 constraints (4 points × 2 coordinates each). We never touch the matrix math directly but we use it in the cv methods.
+OpenCV solves the `3×3 matrix` from those 8 constraints (4 points × 2 coordinates each). We never touch the matrix math directly but we use it in the cv methods.
+
+## Day 3 --> Homography
+Perspective tramsform manually allows us to click through the points, `Homograpy` computes them automatically from thousands of pairs of matched feature points between two images using the same `3x3 matrix`.
+- `Why many points instead of 4?` Because real matched points have noise so some matches are wrong (outliers). If we use exactly 4 bad matches, the homography is garbage. 
+- `cv.findHomography` uses `RANSAC (Random Sample Consensus)` It tries thousands of random subsets of 4 points, finds the matrix that agrees with the most matches, and discards the outliers automatically. More input points = more robust result.
+
+`RANSAC` asks: `given all these noisy point matches, what's the transformation that most of them agree on?`
+It works by:
+1. Picking 4 random point pairs → computes a candidate homography
+2. Testing all other point pairs against it and counting how many "agree" = `(inliers)`
+Repeats thousands of times for different 4 points
+Keeps the homography with the most inliers
+
+This is why homography is robust to bad matches. Even if 40% of the feature matches are wrong, RANSAC finds the correct transform from the 60% that are right.
