@@ -94,4 +94,4 @@ with gr.Blocks(title="CV Image Processing Toolkit") as app:
         component.change(fn=process, inputs=all_inputs, outputs=all_outputs)
 
 
-app.launch()
+app.launch(server_name="0.0.0.0", server_port=7860)
