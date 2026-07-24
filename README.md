@@ -88,7 +88,7 @@ CV logic is completely separated from the UI. Every function in `operations.py` 
 
 ### Screenshots
 
-![clahe image](CLAHE.png)
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/CLAHE.png>)
 ![contour image](<Contour Detection.png>) 
 ![gaussian blur](<Gaussian Blur.png>) 
 ![grayscale](Grayscale.png) 
