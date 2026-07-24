@@ -89,15 +89,14 @@ CV logic is completely separated from the UI. Every function in `operations.py` 
 ### Screenshots
 
 ![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/CLAHE.png>)
-![contour image](<Contour Detection.png>) 
-![gaussian blur](<Gaussian Blur.png>) 
-![grayscale](Grayscale.png) 
-![histogram equalization](<Histogram Equalization.png>) 
-![histogram](Histogram.png) 
-![hsv and lab colorspaces](<HSV and LAB colorspaces.png>) 
-![sharpening](Sharpening.png) 
-![canny edge detection](<Canny Edge Detection.png>)
-
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/Canny Edge Detection.png>)
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/Contour Detection.png>)
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/Gaussian Blur.png>)
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/Grayscale.png>)
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/Histogram Equalization.png>)
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/Histogram.png>)
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/HSV and LAB colorspaces.png>)
+![alt text](<classical-cv/week8_project/assets/classical-cv screenshots/Sharpening.png>)
 
 ## Repository Structure
 
