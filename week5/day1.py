@@ -24,22 +24,6 @@ hist_b = cv.calcHist([b], [0], None, [256], [0, 256])
 hist_g = cv.calcHist([g], [0], None, [256], [0, 256])
 hist_r = cv.calcHist([r], [0], None, [256], [0, 256])
 
-fig, axes = plt.subplots(1, 3, figsize=(15, 5))
-
-channel_data = [
-    (hist_b, 'Blue Channel', 'blue'),
-    (hist_g, 'Green Channel', 'green'),
-    (hist_r, 'Red Channel',   'red'),
-]
-
-for ax, (hist, title, color) in zip(axes, channel_data):
-    ax.plot(hist.flatten(), color=color)  # flatten: (256,1) → (256,)
-    ax.set_title(title)
-    ax.set_xlabel('Pixel Intensity (0–255)')
-    ax.set_ylabel('Pixel Count')
-    ax.set_xlim([0, 256])
-
-plt.tight_layout()
 
 print("Blue pixel with highest count:", np.argmax(hist_b))
 print("Green pixel with highest count:", np.argmax(hist_g))
